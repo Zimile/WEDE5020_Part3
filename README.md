@@ -2,8 +2,8 @@
 
 A responsive, multi-page website for **Timmy's Yummy Bakes**, a small home bakery in Ermelo, Mpumalanga, run by a university student who bakes to fund her studies.
 
-**Live site:** https://zimile.github.io/WEDE5020/
-**Repository:** https://github.com/Zimile/WEDE5020
+**Live site:** https://zimile.github.io/WEDE5020_Part3/
+**Repository:** https://github.com/Zimile/WEDE5020_Part3
 
 ---
 
@@ -170,8 +170,8 @@ No build step or install is needed.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Zimile/WEDE5020.git
-   cd WEDE5020
+   git clone https://github.com/Zimile/WEDE5020_Part3.git
+   cd WEDE5020_Part3
    ```
 2. Start a local web server. A server is recommended over double-clicking the files, so that `fetch` and the map behave as they will online:
    ```bash
@@ -259,10 +259,10 @@ Interaction tests (49 checks) covered:
    ```
 2. On GitHub, open the repository → **Settings** → **Pages**.
 3. Under **Build and deployment**, set **Source** to *Deploy from a branch*, choose **master** and **/ (root)**, then click **Save**.
-4. Wait 1–2 minutes. The site will be live at **https://zimile.github.io/WEDE5020/**.
+4. Wait 1–2 minutes. The site will be live at **https://zimile.github.io/WEDE5020_Part3/**.
 5. Check every page on the live URL (including on your phone), then add your Formspree endpoint as described above.
 
-All file paths are relative, so the site works from the `/WEDE5020/` sub-path without changes.
+All file paths are relative, so the site works from the `/WEDE5020_Part3/` sub-path without changes.
 
 ## Screenshots
 
