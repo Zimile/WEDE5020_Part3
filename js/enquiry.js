@@ -48,7 +48,7 @@
         name: function (f) { return R.name(f.elements.name.value); },
         email: function (f) { return R.email(f.elements.email.value); },
         phone: function (f) { return R.phone(f.elements.phone.value, true); },
-        enquiryType: function (f) { return R.select(f.elements.enquiryType.value, "the type of enquiry"); },
+        enquiryType: function (f) { return R.select(f.elements.enquiryType.value, "an occasion"); },
         product: function (f) { return R.select(f.elements.product.value, "a product"); },
         quantity: function (f) {
             var v = f.elements.quantity.value.trim();
