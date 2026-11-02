@@ -1,82 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timmy's Yummy Bakes | Menu</title>
-    <meta name="description" content="Timmy's Yummy Bakes menu - affordable prices on cakes, cupcakes and biscuits.">
+    <title>Menu &amp; Prices: Cakes, Cupcakes | Timmy's Yummy Bakes</title>
+    <meta name="description" content="Browse Timmy's Yummy Bakes menu and prices: celebration cakes from R200, cupcakes from R60 a box and biscuits at R100 a dozen. Search and filter to find a treat.">
+    <meta name="keywords" content="bakery menu Ermelo, cake prices, cupcake prices, red velvet cake, chocolate cake, biscuits by the dozen">
+    <meta name="author" content="Timmy's Yummy Bakes">
+    <link rel="canonical" href="https://zimile.github.io/WEDE5020/menu.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Timmy's Yummy Bakes">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:title" content="Menu &amp; Prices | Timmy's Yummy Bakes">
+    <meta property="og:description" content="Celebration cakes, cupcakes and biscuits, baked fresh to order in Ermelo. See every item and price.">
+    <meta property="og:url" content="https://zimile.github.io/WEDE5020/menu.html">
+    <meta property="og:image" content="https://zimile.github.io/WEDE5020/images/assorted-homemade-cookies-platter.jpg">
+    <meta property="og:image:alt" content="Platter of homemade cookies arranged in rows">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;family=Playfair+Display:wght@700&amp;display=swap">
     <link rel="stylesheet" href="css/style.css">
+    <script>document.documentElement.className = "js";</script>
+    <script src="js/main.js" defer></script>
+    <script src="js/products.js" defer></script>
+    <script src="js/menu.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-    <header>
-        <div class="logo">
-            <h1>Timmy's Yummy Bakes</h1>
-            <p class="tagline">Baked with love, one order at a time</p>
+    <!-- ===== HEADER ===== -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="index.html" aria-label="Timmy's Yummy Bakes home page">
+                <span class="logo-name">Timmy's Yummy Bakes</span>
+                <span class="tagline">Baked with love, one order at a time</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <nav id="site-nav" class="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html" class="active" aria-current="page">Menu</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="menu.html" class="active">Menu</a></li>
-                <li><a href="enquiry.html">Enquiry</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
-        <section id="menu-intro">
-            <h2>Our Menu</h2>
-            <p>All items are baked fresh to order. Please allow 24-48 hours notice.</p>
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="main">
+
+        <section id="menu-intro" class="page-intro" aria-labelledby="menu-title">
+            <span class="eyebrow">Baked fresh to order</span>
+            <h1 id="menu-title">Our Menu &amp; Prices</h1>
+            <p class="lead">All items are baked fresh to order. Please allow 24-48 hours' notice. Search by flavour or occasion, or filter by category.</p>
         </section>
 
-        <section id="menu-cakes">
-            <h2>Cakes</h2>
-            <ul class="menu-list">
-                <li><span>Vanilla Sponge Cake with Caramel Filling</span> <span>R200</span></li>
-                <li><span>Chocolate Cake with Chocolate Ganache Filling</span> <span>R250</span></li>
-                <li><span>Red Velvet Cake with Cream Cheese Filling</span> <span>R280</span></li>
-            </ul>
+        <section id="menu-products" aria-labelledby="products-title">
+            <h2 id="products-title" class="visually-hidden">Products</h2>
+
+            <div class="toolbar" role="search">
+                <div class="search-field">
+                    <label for="menu-search">Search the menu</label>
+                    <div class="search-input-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                        <input type="search" id="menu-search" name="q" placeholder="e.g. chocolate, birthday, lemon" autocomplete="off" aria-describedby="menu-status">
+                    </div>
+                </div>
+                <div class="sort-field">
+                    <label for="menu-sort">Sort by</label>
+                    <select id="menu-sort" name="sort">
+                        <option value="featured">Featured</option>
+                        <option value="price-asc">Price: low to high</option>
+                        <option value="price-desc">Price: high to low</option>
+                        <option value="name">Name: A to Z</option>
+                    </select>
+                </div>
+                <div class="filter-buttons" role="group" aria-label="Filter by category">
+                    <button type="button" class="filter-btn" data-category="all" aria-pressed="true">All</button>
+                    <button type="button" class="filter-btn" data-category="cakes" aria-pressed="false">Cakes</button>
+                    <button type="button" class="filter-btn" data-category="cupcakes" aria-pressed="false">Cupcakes</button>
+                    <button type="button" class="filter-btn" data-category="biscuits" aria-pressed="false">Biscuits</button>
+                </div>
+            </div>
+
+            <p id="menu-status" class="results-status" role="status" aria-live="polite"></p>
+
+            <div id="product-grid" class="products-grid"></div>
+
+            <div id="menu-empty" class="empty-state" hidden>
+                <h3>No treats match "<span id="menu-empty-term"></span>"</h3>
+                <p>Try a different flavour such as "vanilla" or "chocolate", or browse everything. Can't find what you're after? We bake custom orders too.</p>
+                <div class="btn-group center">
+                    <button type="button" id="menu-clear" class="btn">Show all treats</button>
+                    <a href="enquiry.html" class="btn btn-outline">Ask about a custom order</a>
+                </div>
+            </div>
+
+            <noscript>
+                <p>Turn on JavaScript to search and filter the menu. Full price list:</p>
+                <ul class="menu-list">
+                    <li>Vanilla Sponge Cake with Caramel Filling: R200</li>
+                    <li>Chocolate Cake with Chocolate Ganache Filling: R250</li>
+                    <li>Red Velvet Cake with Cream Cheese Filling: R280</li>
+                    <li>Classic Vanilla Cupcakes (box of 6): R60</li>
+                    <li>Chocolate Cupcakes (box of 6): R65</li>
+                    <li>Lemon Poppy Seed Cupcakes (box of 6): R65</li>
+                    <li>Chocolate Chip Biscuits (dozen): R100</li>
+                    <li>Ginger Biscuits (dozen): R100</li>
+                    <li>Coconut Biscuits (dozen): R100</li>
+                </ul>
+            </noscript>
+            <p class="hint">Photos show examples of our bakes; decoration may vary.</p>
         </section>
 
-        <section id="menu-cupcakes">
-            <h2>Cupcakes</h2>
-            <ul class="menu-list">
-                <li><span>Classic Vanilla (box of 6)</span> <span>R60</span></li>
-                <li><span>Chocolate (box of 6)</span> <span>R65</span></li>
-                <li><span>Lemon Poppy Seed (box of 6)</span> <span>R65</span></li>
-            </ul>
-        </section>
-
-        <section id="menu-biscuits">
-            <h2>Biscuits</h2>
-            <ul class="menu-list">
-                <li><span>Chocolate Chip Biscuits (dozen)</span> <span>R100</span></li>
-                <li><span>Ginger Biscuits (dozen)</span> <span>R100</span></li>
-                <li><span>Coconut Biscuits (dozen)</span> <span>R100</span></li>
-            </ul>
-        </section>
-
-        <section id="menu-cta">
-            <h2>Ready to order?</h2>
-            <p>Send through your order details and get a reply with availability.</p>
+        <section id="menu-cta" class="cta-banner reveal" aria-labelledby="cta-title">
+            <h2 id="cta-title">Ready to order?</h2>
+            <p>Send through your order details and get an instant estimate with availability.</p>
             <a href="enquiry.html" class="btn">Make an enquiry</a>
         </section>
+
     </main>
 
-    <footer>
-        <div class="footer-contact">
-            <h3>Get in Touch</h3>
-            <p>Email: TimmyBakes1402.co.za</p>
-            <p>Phone: 075 071 8553</p>
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <h2>Timmy's Yummy Bakes</h2>
+                <p>Homemade cakes, cupcakes and biscuits baked fresh to order in Ermelo, Mpumalanga. Every order supports a student's studies.</p>
+            </div>
+            <nav aria-label="Footer">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="menu.html">Menu &amp; prices</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="enquiry.html">Order enquiry</a></li>
+                    <li><a href="about.html#credits">Credits &amp; references</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h2>Get in Touch</h2>
+                <p>Phone: <a href="tel:+27750718553">075 071 8553</a></p>
+                <p>Email: TimmyBakes1402.co.za</p>
+                <p><a href="contact.html#find-us">Find our market stall</a></p>
+            </div>
         </div>
-        <div class="footer-social">
-            <p>Follow us:</p>
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-        </div>
-        <p class="copyright">&copy; 2026 Timmy's Yummy Bakes. All rights reserved.</p>
+        <p class="copyright">&copy; <span data-year>2026</span> Timmy's Yummy Bakes. All rights reserved.</p>
     </footer>
 
 </body>
