@@ -1,98 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timmy's Yummy Bakes | Enquiry</title>
-    <meta name="description" content="Enquire about a custom order from Timmy's Yummy Bakes - celebration cakes, cupcakes, and cookies.">
-    
+    <title>Order Enquiry &amp; Instant Quote | Timmy's Yummy Bakes</title>
+    <meta name="description" content="Request a cake, cupcake or biscuit order from Timmy's Yummy Bakes. Choose your treat, quantity and date to get an instant cost estimate and availability check.">
+    <meta name="keywords" content="cake order enquiry, cupcake quote, birthday cake order Ermelo, bakery price estimate, custom cake request">
+    <meta name="author" content="Timmy's Yummy Bakes">
+    <link rel="canonical" href="https://zimile.github.io/WEDE5020/enquiry.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Timmy's Yummy Bakes">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:title" content="Order Enquiry &amp; Instant Quote | Timmy's Yummy Bakes">
+    <meta property="og:description" content="Get an instant estimate and availability check for cakes, cupcakes and biscuits baked fresh in Ermelo.">
+    <meta property="og:url" content="https://zimile.github.io/WEDE5020/enquiry.html">
+    <meta property="og:image" content="https://zimile.github.io/WEDE5020/images/red-velvet-sponge-cake-layers.jpg">
+    <meta property="og:image:alt" content="Red velvet sponge cake layers on a cooling rack">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;family=Playfair+Display:wght@700&amp;display=swap">
     <link rel="stylesheet" href="css/style.css">
+    <script>document.documentElement.className = "js";</script>
+    <script src="js/main.js" defer></script>
+    <script src="js/config.js" defer></script>
+    <script src="js/products.js" defer></script>
+    <script src="js/form-utils.js" defer></script>
+    <script src="js/enquiry.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <!-- ===== HEADER ===== -->
-    <header>
-        <div class="logo">
-            <h1>Timmy's Yummy Bakes</h1>
-            <p class="tagline">Baked with love, one order at a time</p>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="index.html" aria-label="Timmy's Yummy Bakes home page">
+                <span class="logo-name">Timmy's Yummy Bakes</span>
+                <span class="tagline">Baked with love, one order at a time</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <nav id="site-nav" class="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="enquiry.html" class="active" aria-current="page">Enquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        
-
-        <!-- ===== NAVIGATION ===== -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="enquiry.html" class="active">Enquiry</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
     <!-- ===== MAIN CONTENT ===== -->
-    <main>
+    <main id="main">
 
-        <section id="enquiry-intro">
-            <h2>Order Enquiry</h2>
-            <p>
-                Planning a birthday, graduation, or other celebration? Fill in the
-                form below with your order details and we'll get back to you with
-                availability and pricing.
-            </p>
+        <section id="enquiry-intro" class="page-intro" aria-labelledby="enquiry-title">
+            <span class="eyebrow">Instant estimate</span>
+            <h1 id="enquiry-title">Order Enquiry</h1>
+            <p class="lead">Planning a birthday, graduation or other celebration? Fill in your order details for an instant estimated price and availability check. Your enquiry is then sent straight to Timmy.</p>
         </section>
 
-        <!-- Enquiry form -->
-        <section id="enquiry-form-section">
-            <form id="enquiry-form" action="#" method="post">
+        <section id="enquiry-form-section" aria-labelledby="form-title">
+            <h2 id="form-title" class="visually-hidden">Enquiry form</h2>
 
-                <label for="enquiry-name">Full Name</label>
-                <input type="text" id="enquiry-name" name="enquiry-name" required>
+            <div id="enquiry-summary" class="summary" hidden></div>
 
-                <label for="enquiry-email">Email</label>
-                <input type="email" id="enquiry-email" name="enquiry-email" required>
+            <form id="enquiry-form" action="#" method="post" novalidate>
+                <div class="alert alert-error form-errors" tabindex="-1" role="alert" hidden></div>
+                <p class="hint">Fields marked <span class="required" aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span> are required.</p>
 
-                <label for="enquiry-phone">Phone Number</label>
-                <input type="tel" id="enquiry-phone" name="enquiry-phone">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="enquiry-name">Full name <span class="required" aria-hidden="true">*</span></label>
+                        <input type="text" id="enquiry-name" name="name" autocomplete="name" required aria-describedby="name-error">
+                        <p class="field-error" id="name-error" aria-live="polite"></p>
+                    </div>
 
-                <label for="enquiry-product">Product Type</label>
-                <select id="enquiry-product" name="enquiry-product" required>
-                    <option value="">-- Select a product --</option>
-                    <option value="cakes">Cakes</option>
-                    <option value="cupcakes">Cupcakes</option>
-                    <option value="biscuits">Biscuits</option>
-                    <option value="other">Other</option>
-                </select>
+                    <div class="form-group">
+                        <label for="enquiry-email">Email <span class="required" aria-hidden="true">*</span></label>
+                        <input type="email" id="enquiry-email" name="email" autocomplete="email" inputmode="email" required aria-describedby="email-error">
+                        <p class="field-error" id="email-error" aria-live="polite"></p>
+                    </div>
 
-                <label for="enquiry-date">Date Needed</label>
-                <input type="date" id="enquiry-date" name="enquiry-date">
+                    <div class="form-group">
+                        <label for="enquiry-phone">Phone number <span class="required" aria-hidden="true">*</span></label>
+                        <input type="tel" id="enquiry-phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="e.g. 075 071 8553" required aria-describedby="phone-hint phone-error">
+                        <span class="hint" id="phone-hint">South African number starting with 0 or +27.</span>
+                        <p class="field-error" id="phone-error" aria-live="polite"></p>
+                    </div>
 
-                <label for="enquiry-details">Order Details</label>
-                <textarea id="enquiry-details" name="enquiry-details" rows="6"
-                    placeholder="Tell us about flavours, size, theme, and quantity"></textarea>
+                    <div class="form-group">
+                        <label for="enquiry-type">Occasion <span class="required" aria-hidden="true">*</span></label>
+                        <select id="enquiry-type" name="enquiryType" required aria-describedby="enquiryType-error">
+                            <option value="">-- Select an occasion --</option>
+                            <option value="birthday">Birthday party</option>
+                            <option value="graduation">Graduation</option>
+                            <option value="baby-shower">Baby shower or gender reveal</option>
+                            <option value="wedding">Wedding or engagement</option>
+                            <option value="corporate">Office or corporate treats</option>
+                            <option value="fundraiser">School, church or fundraiser event</option>
+                            <option value="personal">Just because (personal treat)</option>
+                        </select>
+                        <p class="field-error" id="enquiryType-error" aria-live="polite"></p>
+                    </div>
 
-                <button type="submit" class="btn">Submit Enquiry</button>
+                    <div class="form-group">
+                        <label for="enquiry-product">Product <span class="required" aria-hidden="true">*</span></label>
+                        <select id="enquiry-product" name="product" required aria-describedby="product-hint product-error">
+                            <option value="">-- Select a product --</option>
+                        </select>
+                        <span class="hint" id="product-hint"></span>
+                        <p class="field-error" id="product-error" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiry-quantity">Quantity <span id="quantity-unit"></span> <span class="required" aria-hidden="true">*</span></label>
+                        <input type="number" id="enquiry-quantity" name="quantity" min="1" max="50" step="1" value="1" inputmode="numeric" required aria-describedby="quantity-hint quantity-error">
+                        <span class="hint" id="quantity-hint">Number of cakes, boxes of 6 cupcakes or dozens of biscuits (1-50).</span>
+                        <p class="field-error" id="quantity-error" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiry-date">Date needed <span class="required" aria-hidden="true">*</span></label>
+                        <input type="date" id="enquiry-date" name="date" required aria-describedby="date-hint date-error">
+                        <span class="hint" id="date-hint">Please allow 24-48 hours' notice.</span>
+                        <p class="field-error" id="date-error" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <fieldset aria-describedby="fulfilment-error">
+                            <legend>Collection <span class="required" aria-hidden="true">*</span></legend>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="fulfilment" value="kitchen" required>
+                                    Home kitchen (by appointment)
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="fulfilment" value="market">
+                                    Market stall (weekends)
+                                </label>
+                            </div>
+                        </fieldset>
+                        <p class="field-error" id="fulfilment-error" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="enquiry-message">Order details <span class="required" aria-hidden="true">*</span>
+                            <span class="char-count" id="enquiry-message-count" aria-hidden="true"></span>
+                        </label>
+                        <textarea id="enquiry-message" name="message" rows="6" maxlength="500" required
+                            placeholder="Tell us about flavours, size, theme, colours, message on the cake and any allergies"
+                            aria-describedby="message-hint message-error"></textarea>
+                        <span class="hint" id="message-hint">At least 20 characters.</span>
+                        <p class="field-error" id="message-error" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-group full">
+                        <label class="checkbox-option" for="enquiry-consent">
+                            <input type="checkbox" id="enquiry-consent" name="consent" required aria-describedby="consent-error">
+                            I agree that Timmy's Yummy Bakes may contact me by email or phone about this enquiry. <span class="required" aria-hidden="true">*</span>
+                        </label>
+                        <p class="field-error" id="consent-error" aria-live="polite"></p>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn">Get my estimate</button>
+                    <button type="reset" class="btn btn-outline">Clear form</button>
+                </div>
             </form>
         </section>
 
     </main>
 
     <!-- ===== FOOTER ===== -->
-    <footer>
-        <div class="footer-contact">
-            <h3>Get in Touch</h3>
-            <p>Email: TimmyBakes1402.co.za</p>
-            <p>Phone: 075 071 8553</p>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <h2>Timmy's Yummy Bakes</h2>
+                <p>Homemade cakes, cupcakes and biscuits baked fresh to order in Ermelo, Mpumalanga. Every order supports a student's studies.</p>
+            </div>
+            <nav aria-label="Footer">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="menu.html">Menu &amp; prices</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="enquiry.html">Order enquiry</a></li>
+                    <li><a href="about.html#credits">Credits &amp; references</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h2>Get in Touch</h2>
+                <p>Phone: <a href="tel:+27750718553">075 071 8553</a></p>
+                <p>Email: TimmyBakes1402.co.za</p>
+                <p><a href="contact.html#find-us">Find our market stall</a></p>
+            </div>
         </div>
-        <div class="footer-social">
-            <p>Follow us:</p>
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-        </div>
-        <p class="copyright">&copy; 2026 Timmy's Yummy Bakes. All rights reserved.</p>
+        <p class="copyright">&copy; <span data-year>2026</span> Timmy's Yummy Bakes. All rights reserved.</p>
     </footer>
 
-    <!-- JS will be linked here in Part 3 -->
-    <script src="js/script.js"></script>
 </body>
 </html>
