@@ -854,9 +854,11 @@ mark {
     transition: opacity var(--ease), visibility var(--ease);
 }
 
+/* Visibility switches instantly on open so the close button can take focus */
 .lightbox.is-open {
     opacity: 1;
     visibility: visible;
+    transition: opacity var(--ease), visibility 0s;
 }
 
 .lightbox-figure {
