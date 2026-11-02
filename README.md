@@ -318,7 +318,7 @@ References use the Harvard style.
 
 ## Author
 
-- **Name:** Moarabi Tong
-- **GitHub:** [MoarabiTong](https://github.com/MoarabiTong)
+- **Name:** Zimile
+- **GitHub:** [Zimile](https://github.com/Zimile)
 - **Module:** WEDE5020 (Web Development)
-- **Student number:** *[add your student number]*
+- **Student number:** ST10452292
