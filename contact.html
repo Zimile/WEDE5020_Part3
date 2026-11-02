@@ -1,91 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timmy's Yummy Bakes | Contact</title>
-    <meta name="description" content="Get in touch with Timmy's Yummy Bakes - place your order today.">
+    <title>Contact Us &amp; Find Our Ermelo Stall | Timmy's Yummy Bakes</title>
+    <meta name="description" content="Contact Timmy's Yummy Bakes by phone or our online form, and find our weekend market stall at the Ermelo taxi rank on the map. We reply to every message.">
+    <meta name="keywords" content="contact Timmy's Yummy Bakes, Ermelo taxi rank market stall, bakery phone number, bakery location Ermelo, Mpumalanga bakery">
+    <meta name="author" content="Timmy's Yummy Bakes">
+    <link rel="canonical" href="https://zimile.github.io/WEDE5020/contact.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Timmy's Yummy Bakes">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:title" content="Contact &amp; Find Us | Timmy's Yummy Bakes">
+    <meta property="og:description" content="Send us a message or find our weekend market stall at the Ermelo taxi rank.">
+    <meta property="og:url" content="https://zimile.github.io/WEDE5020/contact.html">
+    <meta property="og:image" content="https://zimile.github.io/WEDE5020/images/assorted-gourmet-cupcakes-gift-box.jpg">
+    <meta property="og:image:alt" content="Gift box of assorted decorated cupcakes">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;family=Playfair+Display:wght@700&amp;display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
     <link rel="stylesheet" href="css/style.css">
+    <script>document.documentElement.className = "js";</script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/config.js" defer></script>
+    <script src="js/form-utils.js" defer></script>
+    <script src="js/map.js" defer></script>
+    <script src="js/contact.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-    <header>
-        <div class="logo">
-            <h1>Timmy's Yummy Bakes</h1>
-            <p class="tagline">Baked with love, one order at a time</p>
+    <!-- ===== HEADER ===== -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="index.html" aria-label="Timmy's Yummy Bakes home page">
+                <span class="logo-name">Timmy's Yummy Bakes</span>
+                <span class="tagline">Baked with love, one order at a time</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <nav id="site-nav" class="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="enquiry.html">Enquiry</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
-        <section id="contact-info">
-            <h2>Contact Us</h2>
-            <p>Have a question or want to place an order? Reach out below.</p>
-            <p>Email: TimmyBakes1402.co.za</p>
-            <p>Phone: 075 071 8553</p>
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="main">
+
+        <section id="contact-info" class="page-intro" aria-labelledby="contact-title">
+            <span class="eyebrow">We'd love to hear from you</span>
+            <h1 id="contact-title">Contact Us</h1>
+            <p class="lead">Have a question or want to place an order? Call us, send a message below, or visit our weekend market stall.</p>
+            <p><strong>Phone:</strong> <a href="tel:+27750718553">075 071 8553</a><br>
+               <strong>Email:</strong> TimmyBakes1402.co.za</p>
         </section>
 
-        <section id="locations">
-            <h2>Where to Find Us</h2>
-            <div class="locations-grid">
-                <article class="location-card">
-                    <h3>Home Kitchen (Pickup by Appointment)</h3>
-                    <p>Ermelo, Mpumalanga</p>
-                    <iframe
-                        title="Map showing the Timmy's Yummy Bakes pickup location"
-                        src="https://www.google.com/maps?q=Sandton,+Johannesburg&output=embed"
-                        width="100%" height="250" style="border:0;" loading="lazy">
-                    </iframe>
-                </article>
-                <article class="location-card">
-                    <h3>Weekend Market Stall</h3>
-                    <p>Ermelo local taxi rank, Ermelo, Mpumalanga</p>
-                    <iframe
-                        title="Map showing the Timmy's Yummy Bakes market stall location"
-                        src="https://www.google.com/maps?q=Ermelo taxi rank ,+Ermelo&output=embed"
-                        width="100%" height="250" style="border:0;" loading="lazy">
-                    </iframe>
-                </article>
+        <section id="find-us" class="reveal" aria-labelledby="find-title">
+            <h2 id="find-title">Where to Find Us</h2>
+            <div class="map-layout">
+                <div>
+                    <div id="map" class="map" role="region" aria-label="Interactive map of Timmy's Yummy Bakes locations in Ermelo"></div>
+                    <p class="map-hint">Drag to move, use + / &minus; to zoom. Click the map to enable scroll-wheel zoom.</p>
+                </div>
+                <ul class="location-list">
+                    <li class="location-card">
+                        <h3>Weekend Market Stall</h3>
+                        <p>Ermelo Taxi Rank, Ermelo CBD, Ermelo, Mpumalanga, 2350</p>
+                        <p>Open on weekends for pre-order collections and fresh treats.</p>
+                        <div class="btn-group">
+                            <button type="button" class="btn" data-map-target="market">Show on map</button>
+                            <a class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=-26.5201,29.9862" target="_blank" rel="noopener">Directions</a>
+                        </div>
+                    </li>
+                    <li class="location-card">
+                        <h3>Home Kitchen (Pickup by Appointment)</h3>
+                        <p>Ermelo, Mpumalanga. The exact address is shared when your order is confirmed.</p>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline" data-map-target="area">Show pickup area</button>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
-        <section id="contact-form">
-            <h2>Send a message</h2>
-            <form action="#" method="post">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+        <section id="contact-form-section" aria-labelledby="form-title">
+            <h2 id="form-title">Send a Message</h2>
+            <div id="contact-status" class="alert" role="status" aria-live="polite" tabindex="-1" hidden></div>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+            <form id="contact-form" action="#" method="post" novalidate>
+                <div class="alert alert-error form-errors" tabindex="-1" role="alert" hidden></div>
+                <p class="hint">Fields marked <span class="required" aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span> are required.</p>
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="contact-name">Name <span class="required" aria-hidden="true">*</span></label>
+                        <input type="text" id="contact-name" name="name" autocomplete="name" required aria-describedby="name-error">
+                        <p class="field-error" id="name-error" aria-live="polite"></p>
+                    </div>
 
-                <button type="submit" class="btn">Send Message</button>
+                    <div class="form-group">
+                        <label for="contact-email">Email <span class="required" aria-hidden="true">*</span></label>
+                        <input type="email" id="contact-email" name="email" autocomplete="email" inputmode="email" required aria-describedby="email-error">
+                        <p class="field-error" id="email-error" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-phone">Phone <span class="optional">(optional)</span></label>
+                        <input type="tel" id="contact-phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="e.g. 075 071 8553" aria-describedby="contact-phone-hint phone-error">
+                        <span class="hint" id="contact-phone-hint">South African number starting with 0 or +27.</span>
+                        <p class="field-error" id="phone-error" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-subject">Subject <span class="required" aria-hidden="true">*</span></label>
+                        <select id="contact-subject" name="subject" required aria-describedby="subject-error">
+                            <option value="">-- Choose a subject --</option>
+                            <option value="general">General question</option>
+                            <option value="order">Question about an existing order</option>
+                            <option value="custom">Custom cake idea</option>
+                            <option value="market">Market stall</option>
+                            <option value="feedback">Feedback or compliment</option>
+                        </select>
+                        <p class="field-error" id="subject-error" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="contact-message">Message <span class="required" aria-hidden="true">*</span>
+                            <span class="char-count" id="contact-message-count" aria-hidden="true"></span>
+                        </label>
+                        <textarea id="contact-message" name="message" rows="6" maxlength="1000" required aria-describedby="contact-message-hint message-error"></textarea>
+                        <span class="hint" id="contact-message-hint">At least 20 characters.</span>
+                        <p class="field-error" id="message-error" aria-live="polite"></p>
+                    </div>
+
+                    <!-- Honeypot: hidden from people, filled in by spam bots -->
+                    <div class="visually-hidden" aria-hidden="true">
+                        <label for="contact-gotcha">Leave this field empty</label>
+                        <input type="text" id="contact-gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn">Send message</button>
+                </div>
             </form>
         </section>
+
     </main>
 
-    <footer>
-        <div class="footer-contact">
-            <h3>Get in Touch</h3>
-            <p>Email: TimmyBakes1402.co.za</p>
-            <p>Phone: 075 071 8553</p>
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <h2>Timmy's Yummy Bakes</h2>
+                <p>Homemade cakes, cupcakes and biscuits baked fresh to order in Ermelo, Mpumalanga. Every order supports a student's studies.</p>
+            </div>
+            <nav aria-label="Footer">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="menu.html">Menu &amp; prices</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="enquiry.html">Order enquiry</a></li>
+                    <li><a href="about.html#credits">Credits &amp; references</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h2>Get in Touch</h2>
+                <p>Phone: <a href="tel:+27750718553">075 071 8553</a></p>
+                <p>Email: TimmyBakes1402.co.za</p>
+                <p><a href="contact.html#find-us">Find our market stall</a></p>
+            </div>
         </div>
-        <div class="footer-social">
-            <p>Follow us:</p>
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-        </div>
-        <p class="copyright">&copy; 2026 Timmy's Yummy Bakes. All rights reserved.</p>
+        <p class="copyright">&copy; <span data-year>2026</span> Timmy's Yummy Bakes. All rights reserved.</p>
     </footer>
 
 </body>
