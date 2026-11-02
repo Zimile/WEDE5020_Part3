@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en-ZA" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake &amp; Cupcake Photo Gallery | Timmy's Yummy Bakes</title>
+    <meta name="description" content="See photos of cakes, cupcakes and cookies baked by Timmy's Yummy Bakes in Ermelo. Filter by category and tap any photo to view it full size in the lightbox.">
+    <meta name="keywords" content="bakery gallery, cake photos, cupcake ideas, red velvet sponge, cookie platter, Ermelo baker">
+    <meta name="author" content="Timmy's Yummy Bakes">
+    <link rel="canonical" href="https://zimile.github.io/WEDE5020/gallery.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Timmy's Yummy Bakes">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:title" content="Photo Gallery | Timmy's Yummy Bakes">
+    <meta property="og:description" content="Cakes, cupcakes and cookies fresh from a home kitchen in Ermelo.">
+    <meta property="og:url" content="https://zimile.github.io/WEDE5020/gallery.html">
+    <meta property="og:image" content="https://zimile.github.io/WEDE5020/images/strawberry-vanilla-cupcakes.jpg">
+    <meta property="og:image:alt" content="Vanilla cupcakes topped with fresh strawberries">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;family=Playfair+Display:wght@700&amp;display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <script>document.documentElement.className = "js";</script>
+    <script src="js/main.js" defer></script>
+    <script src="js/gallery.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="index.html" aria-label="Timmy's Yummy Bakes home page">
+                <span class="logo-name">Timmy's Yummy Bakes</span>
+                <span class="tagline">Baked with love, one order at a time</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <nav id="site-nav" class="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="gallery.html" class="active" aria-current="page">Gallery</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="main">
+
+        <section class="page-intro" aria-labelledby="gallery-title">
+            <span class="eyebrow">Fresh from our kitchen</span>
+            <h1 id="gallery-title">Photo Gallery</h1>
+            <p class="lead">A look at the cakes, cupcakes and cookies we bake. Tap or click any photo to see it full size, then use the arrows (or swipe) to browse.</p>
+        </section>
+
+        <section aria-labelledby="photos-title">
+            <h2 id="photos-title" class="visually-hidden">Photos</h2>
+
+            <div class="toolbar">
+                <div class="filter-buttons" role="group" aria-label="Filter photos by category">
+                    <button type="button" class="filter-btn" data-category="all" aria-pressed="true">All</button>
+                    <button type="button" class="filter-btn" data-category="cakes" aria-pressed="false">Cakes</button>
+                    <button type="button" class="filter-btn" data-category="cupcakes" aria-pressed="false">Cupcakes</button>
+                    <button type="button" class="filter-btn" data-category="biscuits" aria-pressed="false">Biscuits</button>
+                </div>
+            </div>
+            <p id="gallery-status" class="results-status" role="status" aria-live="polite"></p>
+
+            <div class="gallery-grid">
+                <figure class="gallery-item" data-category="cakes">
+                    <button type="button" class="gallery-trigger" data-full="images/vanilla-chocolate-red-velvet-sponge-cakes.jpg" aria-haspopup="dialog">
+                        <img src="images/vanilla-chocolate-red-velvet-sponge-cakes-480.jpg" alt="Vanilla, chocolate and red velvet sponge cakes cooling side by side on a wire rack" width="480" height="581" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>Vanilla, chocolate &amp; red velvet sponges</figcaption>
+                </figure>
+                <figure class="gallery-item" data-category="cakes">
+                    <button type="button" class="gallery-trigger" data-full="images/red-velvet-sponge-cake-layers.jpg" aria-haspopup="dialog">
+                        <img src="images/red-velvet-sponge-cake-layers-480.jpg" alt="Two bright red velvet sponge cake layers with scored tops on a cooling rack" width="480" height="280" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>Red velvet sponge layers</figcaption>
+                </figure>
+                <figure class="gallery-item" data-category="cakes">
+                    <button type="button" class="gallery-trigger" data-full="images/chocolate-sponge-cake-layers.jpg" aria-haspopup="dialog">
+                        <img src="images/chocolate-sponge-cake-layers-480.jpg" alt="Two dark chocolate sponge cake layers cooling on a wire rack" width="480" height="215" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>Chocolate sponge layers</figcaption>
+                </figure>
+                <figure class="gallery-item" data-category="cakes">
+                    <button type="button" class="gallery-trigger" data-full="images/vanilla-sponge-cake-layers.jpg" aria-haspopup="dialog">
+                        <img src="images/vanilla-sponge-cake-layers-480.jpg" alt="Three golden vanilla sponge cake layers with a criss-cross pattern on top" width="480" height="215" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>Golden vanilla sponge layers</figcaption>
+                </figure>
+                <figure class="gallery-item" data-category="cupcakes">
+                    <button type="button" class="gallery-trigger" data-full="images/assorted-gourmet-cupcakes-gift-box.jpg" aria-haspopup="dialog">
+                        <img src="images/assorted-gourmet-cupcakes-gift-box-480.jpg" alt="Gift box of assorted cupcakes with strawberry, chocolate, lemon and cookies-and-cream toppings" width="480" height="640" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>Assorted cupcake gift box</figcaption>
+                </figure>
+                <figure class="gallery-item" data-category="cupcakes">
+                    <button type="button" class="gallery-trigger" data-full="images/strawberry-vanilla-cupcakes.jpg" aria-haspopup="dialog">
+                        <img src="images/strawberry-vanilla-cupcakes-480.jpg" alt="Vanilla cupcakes crowned with fresh sliced strawberries beside chocolate ganache cupcakes" width="480" height="248" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>Strawberry vanilla cupcakes</figcaption>
+                </figure>
+                <figure class="gallery-item" data-category="cupcakes">
+                    <button type="button" class="gallery-trigger" data-full="images/cookies-and-cream-cupcakes.jpg" aria-haspopup="dialog">
+                        <img src="images/cookies-and-cream-cupcakes-480.jpg" alt="Cupcakes with vanilla buttercream topped with crushed chocolate cookies" width="480" height="330" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>Cookies &amp; cream cupcakes</figcaption>
+                </figure>
+                <figure class="gallery-item" data-category="cupcakes">
+                    <button type="button" class="gallery-trigger" data-full="images/rainbow-sprinkle-vanilla-cupcakes.jpg" aria-haspopup="dialog">
+                        <img src="images/rainbow-sprinkle-vanilla-cupcakes-480.jpg" alt="Vanilla cupcakes with swirled white buttercream and rainbow sprinkles" width="480" height="275" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>Rainbow sprinkle vanilla cupcakes</figcaption>
+                </figure>
+                <figure class="gallery-item" data-category="cupcakes">
+                    <button type="button" class="gallery-trigger" data-full="images/chocolate-ganache-and-lemon-cupcakes.jpg" aria-haspopup="dialog">
+                        <img src="images/chocolate-ganache-and-lemon-cupcakes-480.jpg" alt="Chocolate ganache cupcakes alongside lemon and pink strawberry buttercream cupcakes" width="480" height="314" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>Chocolate ganache &amp; lemon cupcakes</figcaption>
+                </figure>
+                <figure class="gallery-item" data-category="biscuits">
+                    <button type="button" class="gallery-trigger" data-full="images/assorted-homemade-cookies-platter.jpg" aria-haspopup="dialog">
+                        <img src="images/assorted-homemade-cookies-platter-480.jpg" alt="Platter of homemade cookies in four rows: chocolate chip, oat, candy-coated and double chocolate" width="480" height="360" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>Assorted cookie platter</figcaption>
+                </figure>
+                <figure class="gallery-item" data-category="biscuits">
+                    <button type="button" class="gallery-trigger" data-full="images/chocolate-chip-and-oat-cookies.jpg" aria-haspopup="dialog">
+                        <img src="images/chocolate-chip-and-oat-cookies-480.jpg" alt="Rows of golden chocolate chip and oat cookies" width="480" height="264" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>Chocolate chip &amp; oat cookies</figcaption>
+                </figure>
+                <figure class="gallery-item" data-category="biscuits">
+                    <button type="button" class="gallery-trigger" data-full="images/candy-coated-chocolate-cookies.jpg" aria-haspopup="dialog">
+                        <img src="images/candy-coated-chocolate-cookies-480.jpg" alt="Cookies studded with colourful candy-coated chocolates above a row of double chocolate cookies" width="480" height="302" loading="lazy" decoding="async">
+                    </button>
+                    <figcaption>Candy-coated &amp; double chocolate cookies</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="cta-banner reveal" aria-labelledby="cta-title">
+            <h2 id="cta-title">Seen something you love?</h2>
+            <p>Tell us what caught your eye and we'll bake it fresh for your occasion.</p>
+            <a href="enquiry.html" class="btn">Request this bake</a>
+        </section>
+
+    </main>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" aria-hidden="true">
+        <button class="lightbox-btn lightbox-close" type="button" aria-label="Close photo viewer">&times;</button>
+        <button class="lightbox-btn lightbox-prev" type="button" aria-label="Previous photo">&#8249;</button>
+        <figure class="lightbox-figure">
+            <img id="lightbox-image" alt="">
+            <figcaption>
+                <span id="lightbox-caption"></span>
+                <span id="lightbox-counter" class="lightbox-counter" aria-live="polite"></span>
+            </figcaption>
+        </figure>
+        <button class="lightbox-btn lightbox-next" type="button" aria-label="Next photo">&#8250;</button>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <h2>Timmy's Yummy Bakes</h2>
+                <p>Homemade cakes, cupcakes and biscuits baked fresh to order in Ermelo, Mpumalanga. Every order supports a student's studies.</p>
+            </div>
+            <nav aria-label="Footer">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="menu.html">Menu &amp; prices</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="enquiry.html">Order enquiry</a></li>
+                    <li><a href="about.html#credits">Credits &amp; references</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h2>Get in Touch</h2>
+                <p>Phone: <a href="tel:+27750718553">075 071 8553</a></p>
+                <p>Email: TimmyBakes1402.co.za</p>
+                <p><a href="contact.html#find-us">Find our market stall</a></p>
+            </div>
+        </div>
+        <p class="copyright">&copy; <span data-year>2026</span> Timmy's Yummy Bakes. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
