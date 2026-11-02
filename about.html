@@ -1,59 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timmy's Yummy Bakes | About</title>
-    <meta name="description" content="The story behind Timmy's Yummy Bakes - every purchase makes a difference.">
+    <title>About Timmy's Yummy Bakes | Student-Run Bakery in Ermelo</title>
+    <meta name="description" content="Meet the student baker behind Timmy's Yummy Bakes in Ermelo. Learn our story, what we believe in, and answers to common questions about ordering and pickup.">
+    <meta name="keywords" content="about Timmy's Yummy Bakes, student baker, Ermelo home bakery, small-batch baking, bakery FAQ, cake pickup Ermelo">
+    <meta name="author" content="Timmy's Yummy Bakes">
+    <link rel="canonical" href="https://zimile.github.io/WEDE5020/about.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Timmy's Yummy Bakes">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:title" content="About Timmy's Yummy Bakes | Student-Run Bakery in Ermelo">
+    <meta property="og:description" content="The story of a student who turned her love for baking into a way to fund her studies.">
+    <meta property="og:url" content="https://zimile.github.io/WEDE5020/about.html">
+    <meta property="og:image" content="https://zimile.github.io/WEDE5020/images/vanilla-chocolate-red-velvet-sponge-cakes.jpg">
+    <meta property="og:image:alt" content="Vanilla, chocolate and red velvet sponge cakes on a cooling rack">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;family=Playfair+Display:wght@700&amp;display=swap">
     <link rel="stylesheet" href="css/style.css">
+    <script>document.documentElement.className = "js";</script>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-    <header>
-        <div class="logo">
-            <h1>Timmy's Yummy Bakes</h1>
-            <p class="tagline">Baked with love, one order at a time</p>
+    <!-- ===== HEADER ===== -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="index.html" aria-label="Timmy's Yummy Bakes home page">
+                <span class="logo-name">Timmy's Yummy Bakes</span>
+                <span class="tagline">Baked with love, one order at a time</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <nav id="site-nav" class="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active" aria-current="page">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="enquiry.html">Enquiry</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
-        <section id="about-story">
-            <h2>About Us</h2>
-            <p>Timmy's Yummy Bakes was started by a 21 year old part-time student who turned her love for baking into a way to fund her tuition. What began as a hobby, baking for friends and family, quickly grew into a small home-based business, built entirely on fresh ingredients, family recipes and many late nights between lectures and the oven.</p>
-            <p>Every order helps fund her studies, and every treat is baked with the same care she puts into her schoolwork: planned, checked, tested and delivered with pride.</p>
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="main">
+
+        <section id="about-story" class="two-col" aria-labelledby="about-title">
+            <div>
+                <span class="eyebrow">Our story</span>
+                <h1 id="about-title">About Timmy's Yummy Bakes</h1>
+                <p class="lead">Timmy's Yummy Bakes was started by a 21-year-old part-time student who turned her love for baking into a way to fund her tuition.</p>
+                <p>What began as a hobby, baking for friends and family, quickly grew into a small home-based business, built entirely on fresh ingredients, family recipes and many late nights between lectures and the oven.</p>
+                <p>Every order helps fund her studies, and every treat is baked with the same care she puts into her schoolwork: planned, checked, tested and delivered with pride.</p>
+            </div>
+            <div class="hero-image">
+                <img src="images/vanilla-chocolate-red-velvet-sponge-cakes-480.jpg"
+                     srcset="images/vanilla-chocolate-red-velvet-sponge-cakes-480.jpg 480w, images/vanilla-chocolate-red-velvet-sponge-cakes.jpg 736w"
+                     sizes="(max-width: 900px) 90vw, 560px"
+                     alt="Freshly baked vanilla, chocolate and red velvet sponge cakes cooling on a wire rack"
+                     width="480" height="581">
+            </div>
         </section>
 
-        <section id="values">
-            <h2>What we believe in</h2>
-            <ul>
-                <li>Fresh, quality ingredients in every bake</li>
-                <li>Small-batch baking for consistent quality</li>
-                <li>Supporting a local, student-run business</li>
+        <section id="values" class="reveal" aria-labelledby="values-title">
+            <h2 id="values-title">What We Believe In</h2>
+            <ul class="feature-list">
+                <li><strong>Fresh ingredients</strong> Quality ingredients in every bake, never pre-mixes.</li>
+                <li><strong>Small batches</strong> Small-batch baking keeps the quality consistent from the first cupcake to the last.</li>
+                <li><strong>Local &amp; student-run</strong> Supporting a local business that is also supporting an education.</li>
             </ul>
         </section>
+
+        <section id="faq" class="reveal" aria-labelledby="faq-title">
+            <h2 id="faq-title">Frequently Asked Questions</h2>
+            <div class="accordion" data-accordion>
+                <div class="accordion-item">
+                    <h3>
+                        <button class="accordion-trigger" type="button" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">
+                            How much notice do you need for an order?
+                            <span class="accordion-icon" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+                    <div class="accordion-panel" id="faq-a1" role="region" aria-labelledby="faq-q1">
+                        <p>Everything is baked fresh to order, so please allow 24 to 48 hours' notice. For large or custom celebration orders, the earlier the better. The <a href="enquiry.html">enquiry form</a> tells you instantly whether your date gives enough notice.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3>
+                        <button class="accordion-trigger" type="button" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">
+                            Where do I collect my order?
+                            <span class="accordion-icon" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+                    <div class="accordion-panel" id="faq-a2" role="region" aria-labelledby="faq-q2">
+                        <p>You can collect from the home kitchen in Ermelo by appointment, or from the weekend market stall at the Ermelo taxi rank. See the <a href="contact.html#find-us">map on our contact page</a>.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3>
+                        <button class="accordion-trigger" type="button" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">
+                            Do you make custom celebration cakes?
+                            <span class="accordion-icon" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+                    <div class="accordion-panel" id="faq-a3" role="region" aria-labelledby="faq-q3">
+                        <p>Yes! Birthdays, graduations, baby showers and more. Choose a base cake from the <a href="menu.html?category=cakes">cake menu</a> and describe your theme, colours and message in the enquiry form.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3>
+                        <button class="accordion-trigger" type="button" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">
+                            Can I order in bulk for an event or office?
+                            <span class="accordion-icon" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+                    <div class="accordion-panel" id="faq-a4" role="region" aria-labelledby="faq-q4">
+                        <p>Absolutely. Cupcakes are sold in boxes of 6 and biscuits by the dozen, so they scale easily. Larger orders qualify for a bulk discount, which the enquiry form calculates for you.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3>
+                        <button class="accordion-trigger" type="button" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">
+                            What if I have an allergy or dietary requirement?
+                            <span class="accordion-icon" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+                    <div class="accordion-panel" id="faq-a5" role="region" aria-labelledby="faq-q5">
+                        <p>Please mention any allergies in your enquiry message so we can advise you honestly before you order. Our bakes are made in a home kitchen, so we can't guarantee they are free from common allergens.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="credits" class="reveal" aria-labelledby="credits-title">
+            <h2 id="credits-title">Credits &amp; References</h2>
+            <p>This website uses the following resources. Full references are listed in the project README.</p>
+            <ul class="credits-list">
+                <li>Product photographs: [source to be confirmed by site owner].</li>
+                <li>Agafonkin, V. (2023) <em>Leaflet</em> (Version 1.9.4) [JavaScript library]. Available at: <a href="https://leafletjs.com/" rel="noopener">https://leafletjs.com/</a> (Accessed: 2 November 2026).</li>
+                <li>OpenStreetMap contributors (2026) <em>OpenStreetMap</em>. Available at: <a href="https://www.openstreetmap.org/copyright" rel="noopener">https://www.openstreetmap.org/copyright</a> (Accessed: 2 November 2026).</li>
+                <li>Formspree (2026) <em>Formspree: form backend</em>. Available at: <a href="https://formspree.io/" rel="noopener">https://formspree.io/</a> (Accessed: 2 November 2026).</li>
+                <li>Google Fonts (2026) <em>Playfair Display and Nunito</em>. Available at: <a href="https://fonts.google.com/" rel="noopener">https://fonts.google.com/</a> (Accessed: 2 November 2026).</li>
+            </ul>
+        </section>
+
     </main>
 
-    <footer>
-        <div class="footer-contact">
-            <h3>Get in Touch</h3>
-            <p>Email: TimmyBakes1402.co.za</p>
-            <p>Phone: 075 071 8553</p>
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <h2>Timmy's Yummy Bakes</h2>
+                <p>Homemade cakes, cupcakes and biscuits baked fresh to order in Ermelo, Mpumalanga. Every order supports a student's studies.</p>
+            </div>
+            <nav aria-label="Footer">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="menu.html">Menu &amp; prices</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="enquiry.html">Order enquiry</a></li>
+                    <li><a href="about.html#credits">Credits &amp; references</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h2>Get in Touch</h2>
+                <p>Phone: <a href="tel:+27750718553">075 071 8553</a></p>
+                <p>Email: TimmyBakes1402.co.za</p>
+                <p><a href="contact.html#find-us">Find our market stall</a></p>
+            </div>
         </div>
-        <div class="footer-social">
-            <p>Follow us:</p>
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-        </div>
-        <p class="copyright">&copy; 2026 Timmy's Yummy Bakes. All rights reserved.</p>
+        <p class="copyright">&copy; <span data-year>2026</span> Timmy's Yummy Bakes. All rights reserved.</p>
     </footer>
 
 </body>

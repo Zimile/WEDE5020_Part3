@@ -572,20 +572,23 @@ mark {
     display: none;
 }
 
-/* ---------- Testimonial slider ---------- */
+/* ---------- Image slider ---------- */
 .slider {
     position: relative;
     background: var(--white);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow);
-    padding: 2rem 4rem;
-    text-align: center;
     overflow: hidden;
+}
+
+.slides {
+    position: relative;
 }
 
 .slide {
     display: none;
+    margin: 0;
 }
 
 .slide.is-active {
@@ -593,21 +596,31 @@ mark {
     animation: fade-in 0.5s ease;
 }
 
-.slide blockquote p {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    font-style: italic;
+.no-js .slide:first-child {
+    display: block;
 }
 
-.slide cite {
-    font-style: normal;
-    font-weight: 700;
-    color: var(--brown-600);
+.slide img {
+    width: 100%;
+    aspect-ratio: 16 / 7;
+    object-fit: cover;
+}
+
+.slide figcaption {
+    padding: 1rem 1.5rem 0;
+    text-align: center;
+}
+
+.slide figcaption strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--brown-700);
 }
 
 .slider-btn {
     position: absolute;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     width: 44px;
     height: 44px;
@@ -637,7 +650,7 @@ mark {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
-    margin-top: 1rem;
+    padding: 0.75rem 0 1.25rem;
 }
 
 .slider-dots button {
@@ -1521,18 +1534,14 @@ fieldset {
         padding: 1.25rem;
     }
 
-    .slider {
-        padding: 1.5rem 1.25rem 4rem;
+    .slide img {
+        aspect-ratio: 4 / 3;
     }
 
     .slider-btn {
-        top: auto;
-        bottom: 0.9rem;
-        transform: none;
-    }
-
-    .slider-dots {
-        margin-top: 0.5rem;
+        top: 30%;
+        width: 38px;
+        height: 38px;
     }
 
     .map {
