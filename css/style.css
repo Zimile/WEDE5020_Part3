@@ -1626,3 +1626,12 @@ fieldset {
         margin-bottom: 0.4rem;
     }
 }
+
+/* ---------- Utilities ---------- */
+.text-center {
+    text-align: center;
+}
+
+.text-center .lead {
+    margin: 0 auto 1.5rem;
+}
